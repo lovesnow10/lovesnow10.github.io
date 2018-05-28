@@ -75,6 +75,8 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
+#plugins:
+#- hexo-renderer-mathjax
 ## Themes: https://hexo.io/themes/
 theme: shana
 
@@ -90,4 +92,16 @@ deploy:
     extend_dirs: /
     ignore_hidden: false
     ignore_pattern:
-        public: . 
+        public: .
+
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    config:
+      # MathJax config
+  katex:
+    css: #custom_css_source
+    js: #custom_js_source # not used
+    config:
+      # KaTeX config
